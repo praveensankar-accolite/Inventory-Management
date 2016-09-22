@@ -1,0 +1,192 @@
+﻿<div class="header">
+    <div class="head-strip" style="padding:1% 0 0 0;
+">
+        <div class="head-strip-left" style="padding: 1%;">
+            <span class="joe"><img src="~/Images/1.png" alt=""> </span>
+            <div class="joe-text">
+                <h2>Welcome back Joe Black</h2>
+            </div>
+        </div>
+        <div id="horizontalTab" class="head-strip-left-nowidth" style="margin:1%;">
+            <ul class="resp-tabs-list" style="width:50%;margin-left: 41%;margin-top: -5.6%;">
+                <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span class="cal"> </span><h4>Issues</h4></li>
+                <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span class="cal"> </span><h4>Assets</h4></li>
+                <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span class="cal"> </span><h4>History</h4></li>
+            </ul>
+            <div class="resp-tabs-container">
+                <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+                    <div class="facts" style="background-color:#eeeeee;">
+                        <ul class="tab_list" style="margin:1%;">
+
+
+                            <div style="background-color:white">
+                                issues table
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+
+                    <div class="facts" style="background-color:#eeeeee">
+                        <ul class="tab_list" style="margin:1%;">
+
+                            <div style="background-color:white">
+
+                                assets
+
+
+                                <style>
+                                    div {
+                                        font-family: 'SourceSansPro-Light';
+                                    }
+
+                                    ul.tab {
+                                        list-style-type: none;
+                                        margin: 0;
+                                        padding: 0;
+                                        overflow: hidden;
+                                        color: white;
+                                        background-color: #2b3042;
+                                    }
+
+                                        ul.tab li a:hover {
+                                            color: white;
+                                        }
+                                        /* Float the list items side by side */
+                                        ul.tab li {
+                                            float: left;
+                                        }
+
+                                            /* Style the links inside the list items */
+                                            ul.tab li a {
+                                                display: inline-block;
+                                                color: white;
+                                                text-align: center;
+                                                padding: 14px 16px;
+                                                text-decoration: none;
+                                                transition: 0.3s;
+                                                font-size: 17px;
+                                            }
+
+                                                /* Change background color of links on hover */
+
+
+                                                /* Create an active/current tablink class */
+                                                ul.tab li a:focus, .active {
+                                                    background-color: #474F70;
+                                                }
+
+                                    /* Style the tab content */
+                                    .tabcontent {
+                                        display: none;
+                                        border-top: none;
+                                    }
+                                </style>
+
+
+                                <ul class="tab">
+                                    <li><a href="#" class="tablinks" onclick="openCity(event, 'Add Asset')">Add Asset</a></li>
+                                    <li><a href="#" class="tablinks" onclick="openCity(event, 'Assign Asset')">Assign Asset</a></li>
+
+                                </ul>
+
+                                <div id="Add Asset" class="tabcontent">
+                                    <h3>London</h3>
+                                    <p>London is the capital city of England.</p>
+                                </div>
+
+                                <div id="Assign Asset" class="tabcontent">
+                                    <h3>Paris</h3>
+                                    <p>Paris is the capital of France.</p>
+                                </div>
+
+                                <script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+                                </script>
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+                    <div class="facts" style="background-color:#eeeeee">
+                        <ul class="tab_list" style="margin:1%;">
+
+                            <div style="background-color:white">history</div>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="clearfix"> </div>
+        </div>
+
+        <div class="settiing" style="background-color: #2b3042;margin: 1% 1% 0% 0%;padding: 1em 1em 1em 1em;">
+            <div class="menu2">
+                <span class="menu-at-on"><img src="~/Images/setter.png" alt=""> </span>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Log Out</a></li>
+                </ul>
+                <script>
+						$("span.menu-at-on").click(function(){
+							$(".menu2 ul").slideToggle(500, function(){
+							});
+						});
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"> </div>
+</div>
+<div class="copy-right">
+    <script type="text/javascript">
+										$(document).ready(function() {
+											/*
+											var defaults = {
+									  			containerID: 'toTop', // fading element id
+												containerHoverID: 'toTopHover', // fading element hover id
+												scrollSpeed: 1200,
+												easingType: 'linear'
+									 		};
+											*/
+
+											$().UItoTop({ easingType: 'easeOutQuart' });
+
+										});
+    </script>
+    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</div>

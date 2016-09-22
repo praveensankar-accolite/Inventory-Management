@@ -1,0 +1,25 @@
+﻿@model IEnumerable<int>
+
+@{
+    ViewBag.Title = "RenderIssues";
+}
+
+<h2>RenderIssues</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           @item
+        </td>
+    </tr>
+}
+
+</table>
