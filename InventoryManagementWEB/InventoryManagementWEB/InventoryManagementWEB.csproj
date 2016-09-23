@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -178,6 +179,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dataTables.css" />
     <Content Include="Content\graph.css" />
     <Content Include="Content\jplayer.blue.monday.min.css" />
     <Content Include="Content\jquery.countdown.css" />
@@ -234,9 +236,11 @@
     <Content Include="Scripts\easyResponsiveTabs.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.12.3.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-1.11.0.min.js" />
     <Content Include="Scripts\jquery.countdown.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery.flexisel.js" />
     <Content Include="Scripts\jquery.flot.min.js" />
     <Content Include="Scripts\jquery.jplayer.min.js" />
@@ -295,6 +299,10 @@
     <Content Include="Views\Admin\RenderHome.cshtml" />
     <Content Include="Views\Employee\RenderHome.cshtml" />
     <Content Include="Views\Manager\RenderHome.cshtml" />
+    <Content Include="Views\Admin\HistoryPartial.cshtml" />
+    <Content Include="Views\Admin\AddAssetsPartial.cshtml" />
+    <Content Include="Views\Admin\AssignAssetsPartial.cshtml" />
+    <Content Include="Views\Admin\ViewAssetsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

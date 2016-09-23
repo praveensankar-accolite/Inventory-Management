@@ -3,8 +3,15 @@
     ViewBag.Title = "Home";
 }
 
+<script>
+
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
+
 <div class="header">
-    <div class="head-strip" style="padding:1% 0 0 0;
+    <div class="head-strip" style="padding:2.5% 0 0 0;
 ">
         <div class="head-strip-left" style="padding: 1%;">
             <span class="joe"><img src="~/Images/1.png" alt=""> </span>
@@ -25,7 +32,7 @@
 
 
                             <div style="background-color:white">
-                                issues table
+                               @Html.Partial("RenderIssues");
                             </div>
                         </ul>
                     </div>
@@ -39,12 +46,13 @@
 
                             <div style="background-color:white">
 
-                                assets
+                                <h2>Asset </h2>
 
 
                                 <style>
                                     div {
-                                        font-family: 'SourceSansPro-Light';
+                                        font-family:  "Andale Mono", AndaleMono, monospace;
+                                        color:black;
                                     }
 
                                     ul.tab {
@@ -92,19 +100,23 @@
 
 
                                 <ul class="tab">
-                                    <li><a href="#" class="tablinks" onclick="openCity(event, 'Add Asset')">Add Asset</a></li>
+                                    <li><a href="#" class="tablinks" class='selected' onclick="openCity(event, 'Add Asset')">Add Asset</a></li>
                                     <li><a href="#" class="tablinks" onclick="openCity(event, 'Assign Asset')">Assign Asset</a></li>
+                                    <li><a href="#" class="tablinks" onclick="openCity(event, 'View Asset')">View Assets</a></li>
 
                                 </ul>
 
                                 <div id="Add Asset" class="tabcontent">
-                                    <h3>London</h3>
-                                    <p>London is the capital city of England.</p>
+                                    @Html.Partial("~/Views/Admin/AddAssetsPartial.cshtml");
+
                                 </div>
 
                                 <div id="Assign Asset" class="tabcontent">
-                                    <h3>Paris</h3>
-                                    <p>Paris is the capital of France.</p>
+                                    @Html.Partial("~/Views/Admin/AssignAssetsPartial.cshtml");
+                                </div>
+
+                                <div id="View Asset" class="tabcontent">
+                                    @Html.Partial("~/Views/Admin/ViewAssetsPartial.cshtml");
                                 </div>
 
                                 <script>
@@ -144,7 +156,13 @@ function openCity(evt, cityName) {
                     <div class="facts" style="background-color:#eeeeee">
                         <ul class="tab_list" style="margin:1%;">
 
-                            <div style="background-color:white">history</div>
+                            <div style="background-color:white">
+
+
+                                @*RenderBody history*@
+                                @Html.Partial("~/Views/Admin/HistoryPartial.cshtml");
+
+                            </div>
 
                         </ul>
                     </div>
@@ -156,7 +174,7 @@ function openCity(evt, cityName) {
             <div class="clearfix"> </div>
         </div>
 
-        <div class="settiing" style="background-color: #2b3042;margin: 1% 1% 0% 0%;padding: 1em 1em 1em 1em;">
+        <div class="settiing" style="background-color: #2b3042;">
             <div class="menu2">
                 <span class="menu-at-on"><img src="~/Images/setter.png" alt=""> </span>
                 <ul>
