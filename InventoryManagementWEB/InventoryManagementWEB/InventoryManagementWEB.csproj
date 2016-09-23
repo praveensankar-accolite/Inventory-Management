@@ -207,6 +207,15 @@
     <Content Include="Content\jplayer.blue.monday.min.css" />
     <Content Include="Content\jquery.countdown.css" />
     <Content Include="Content\style.css" />
+    <Content Include="CustomScripts\Admin\AdminController.js" />
+    <Content Include="CustomScripts\Admin\AdminModule.js" />
+    <Content Include="CustomScripts\Admin\AdminService.js" />
+    <Content Include="CustomScripts\Employee\EmployeeController.js" />
+    <Content Include="CustomScripts\Employee\EmployeeModule.js" />
+    <Content Include="CustomScripts\Employee\EmployeeService.js" />
+    <Content Include="CustomScripts\Manager\ManagerController.js" />
+    <Content Include="CustomScripts\Manager\ManagerModule.js" />
+    <Content Include="CustomScripts\Manager\ManagerService.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -215,6 +224,7 @@
     <Content Include="Images\2.png" />
     <Content Include="Images\3.png" />
     <Content Include="Images\3com.png" />
+    <Content Include="Images\Apps-session-logout-icon.png" />
     <Content Include="Images\auther.png" />
     <Content Include="Images\bell.png" />
     <Content Include="Images\calen.png" />
@@ -227,6 +237,10 @@
     <Content Include="Images\invitation.png" />
     <Content Include="Images\jplayer.blue.monday.jpg" />
     <Content Include="Images\key.png" />
+    <Content Include="Images\logout-xxl.png" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\logout1.png" />
+    <Content Include="Images\logout2.png" />
     <Content Include="Images\menu1.png" />
     <Content Include="Images\minus.png" />
     <Content Include="Images\mountan.jpg" />
@@ -248,11 +262,15 @@
     <Content Include="Images\user-prof.png" />
     <Content Include="Images\user.png" />
     <Content Include="Images\wet-cursor.png" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\SignikaNegative-Regular.ttf" />
     <Content Include="fonts\SourceSansPro-Light.ttf" />
+    <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\circles.js" />
     <Content Include="Scripts\CSS\bootstrap.css" />
@@ -329,6 +347,11 @@
     <Content Include="Views\Admin\AddAssetsPartial.cshtml" />
     <Content Include="Views\Admin\AssignAssetsPartial.cshtml" />
     <Content Include="Views\Admin\ViewAssetsPartial.cshtml" />
+    <Content Include="Views\Employee\RenderDashboard.cshtml" />
+    <Content Include="Views\Employee\RenderHistory.cshtml" />
+    <Content Include="Views\Manager\RenderIssues.cshtml" />
+    <Content Include="Views\Manager\RenderHistory.cshtml" />
+    <Content Include="Views\Manager\RenderAssets.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

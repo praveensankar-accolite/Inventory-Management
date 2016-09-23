@@ -19,6 +19,7 @@ namespace InventoryManagementWEB.Controllers
             return View();
         }
 
+
         public ActionResult RenderHome()
         {
             return View(); 

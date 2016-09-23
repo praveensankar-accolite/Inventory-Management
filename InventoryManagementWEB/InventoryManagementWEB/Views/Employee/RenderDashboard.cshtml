@@ -1,0 +1,104 @@
+﻿
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="~/Content/dataTables.css" />
+    <script>
+
+        $(document).ready(function () {
+            $('#EmployeeDashboardTable').DataTable();
+        });
+    </script>
+
+<div>
+    <h4>LIST OF TICKET</h4>
+    <table class="table table-responsive" id="EmployeeDashboardTable" class="display" width="100%">
+        <thead class="thead-inverse">
+            <tr>
+                <th>TICKET NO</th>
+                <th>ASSET</th>
+                <th>ASSET ID</th>
+                <th>ISSUES/COMMENTS</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@@mdo</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@@fat</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@@twitter</td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="remember">
+        <div class="send">
+            <input type="submit" data-toggle="modal" data-target="#myModal" value="ADD TICKET">
+            <!-- <input type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" value="ADD TICKET"/> -->
+
+
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+
+
+    <!-- Large modal -->
+    <!-- Button trigger modal -->
+    <!-- Modal -->  <!-- for Adding a new TICKET -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">ADD NEW TICKET</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleSelect1">Select Asset</label>
+                            <select class="form-control" id="exampleSelect1">
+                                <option selected="Select" onclick="">Select an Asset</option>
+                                <option>Laptop</option>
+                                <option>HeadSet</option>
+                                <option>Keyboard</option>
+                                <option>WirelessMouse</option>
+                                <option>Mobile</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Asset ID</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleTextarea">ISSUES/COMMENTS</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

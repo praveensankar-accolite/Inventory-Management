@@ -9,16 +9,18 @@
         $('#example').DataTable();
     });
 </script>
-
-<div class="header">
-    <div class="head-strip" style="padding:2.5% 0 0 0;
-">
-        <div class="head-strip-left" style="padding: 1%;">
+<script src="~/CustomScripts/Admin/AdminModule.js"></script>
+<script src="~/CustomScripts/Admin/AdminController.js"></script>
+<div class="header"  ng-app="AdminApp">
+    <div class="head-strip" style="padding:0.5% 0 0 0;" ng-controller="AdminController">
+        <div class="head-strip-left" style="padding: 1%;margin-top:1.5%;">
             <span class="joe"><img src="~/Images/1.png" alt=""> </span>
             <div class="joe-text">
-                <h2>Welcome back Joe Black</h2>
+                
+                <h2>Welcome  {{name}}</h2>
             </div>
         </div>
+
         <div id="horizontalTab" class="head-strip-left-nowidth" style="margin:1%;">
             <ul class="resp-tabs-list" style="width:50%;margin-left: 41%;margin-top: -5.6%;">
                 <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span class="cal"> </span><h4>Issues</h4></li>
@@ -28,7 +30,7 @@
             <div class="resp-tabs-container">
                 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                     <div class="facts" style="background-color:#eeeeee;">
-                        <ul class="tab_list" style="margin:1%;">
+                        <ul class="tab_list">
 
 
                             <div style="background-color:white">
@@ -42,7 +44,7 @@
                 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 
                     <div class="facts" style="background-color:#eeeeee">
-                        <ul class="tab_list" style="margin:1%;">
+                        <ul class="tab_list">
 
                             <div style="background-color:white">
 
@@ -51,10 +53,14 @@
 
                                 <style>
                                     div {
-                                        font-family:  "Andale Mono", AndaleMono, monospace;
+                                        font-family:  'SignikaNegative-Regular';
                                         color:black;
                                     }
-
+                                        
+form{
+    padding:0% 20%;
+}
+                                    
                                     ul.tab {
                                         list-style-type: none;
                                         margin: 1% 0% 1% 0%;
@@ -154,7 +160,7 @@ function openCity(evt, cityName) {
                 </div>
                 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
                     <div class="facts" style="background-color:#eeeeee">
-                        <ul class="tab_list" style="margin:1%;">
+                        <ul class="tab_list">
 
                             <div style="background-color:white">
 
@@ -176,10 +182,8 @@ function openCity(evt, cityName) {
 
         <div class="settiing" style="background-color: #2b3042;">
             <div class="menu2">
-                <span class="menu-at-on"><img src="~/Images/setter.png" alt=""> </span>
+                <span class="menu-at-on"><img src="~/Images/logout2.png" alt=""> </span>
                 <ul>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Login</a></li>
                     <li><a href="#">Log Out</a></li>
                 </ul>
                 <script>
