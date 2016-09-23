@@ -1,0 +1,530 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>]Inventory Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+
+<script>$(document).ready(function(c) {
+	$('.cros').on('click', function(c){
+		$('.user-profile').fadeOut('slow', function(c){
+	  		$('.user-profile').remove();
+		});
+	});	  
+});
+</script>
+  
+</head>
+<body>
+<!--header start here-->
+
+<div class="header">
+	<h3 class="main-head"></h3>
+	    <div class="head-strip">
+	    	<div class="head-strip-left">
+	    		<span class="joe"><img src="images/1.png" alt=""> </span>
+	    		<div class="joe-text">
+	    			<h2 style="color:black;">Welcome back SRIDHAR BABU</h2>
+	    			<p style="color:black;">All is Well!</p>
+	    		</div>
+	    	</div>
+	    	<div class="head-strip-right">
+	    		<ul class="strip-date" style="color:black;">
+	    			<a href="#ADD_ASSETS"><li><span class="cal"> </span><h4 style="color:black;">ADD ASSET</h4></li></a>
+	    			<a href="#ASSIGN_ASSETS"><li><span class="clock"> </span><h4 style="color:black;">ASSIGN ASSET </h4></li></a>
+	    			<a href="#LOGS_HISTORY"><li><span class="sun"> </span><h4 style="color:black;">HISTORY LOGS</h4></li></a>
+	    		</ul>
+	    		<div class="settiing">
+	    			<div class="menu2">
+					<span class="menu-at-on"><img src="images/setter.png" alt=""> </span>	
+					<b><ul>
+						<li><a href="#">Profile</a></li>
+						<!-- <li><a href="#" >Login</a></li>	 -->
+						<li><a href="#" >Log Out</a></li>							
+					</ul></b>
+					<script>
+						$("span.menu-at-on").click(function(){
+							$(".menu2 ul").slideToggle(500, function(){
+							});
+						});
+
+					</script>
+				</div>
+						</div>
+	    		</div>
+	    		  <div class="clearfix"> </div>
+	    	</div>
+	    
+<!--header bottom start here-->
+	    <div class="header-bottom">
+
+<!-- header for issues raised - start -->
+			<div class="col-md-8 header-bot-right" style="width:100%;">
+<!--analytic start here-->
+	    		<!-- Login start here -->
+	    			<div class="login">
+					<h4 style="color:black;size:20px;">LIST OF TICKET</h4>
+					<table class="table">
+  								<thead class="thead-inverse">
+  									  <tr style="font-size:20px;">
+  									    <th>TICKET NO</th>
+									      <th>ASSET</th>
+									      <th>ASSET ID</th>
+									      <th>ISSUES/COMMENTS</th>
+									      <th>STATUS</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <th scope="row">1</th>
+									      <td>Mark</td>
+									      <td>Otto</td>
+									      <td>@mdo</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">2</th>
+									      <td>Jacob</td>
+									      <td>Thornton</td>
+									      <td>@fat</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">3</th>
+									      <td>Larry</td>
+									      <td>the Bird</td>
+									      <td>@twitter</td>
+									    </tr>
+
+							  </tbody>
+							</table>
+
+					<div class="remember">
+						<div class="send">
+							<input type="submit" data-toggle="modal" data-target="#myModal" value="VIEW ALL TICKETS">
+							<!-- <input type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" value="ADD TICKET"/> -->
+  
+
+								</div>
+							  <div class="clearfix"> </div>
+							</div>
+
+					
+					<!-- Large modal -->
+
+				 <!-- Button trigger modal -->
+
+
+<!-- Modal -->  <!-- for Adding a new TICKET -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+		        <h4 class="modal-title" id="myModalLabel">ADD NEW TICKET</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form>
+		        	<div class="form-group">
+    							<label for="exampleSelect1">Select Asset</label>
+    							<select class="form-control" id="exampleSelect1">
+    									<option selected="Select" onclick="">Select an Asset</option>
+      									<option>Laptop</option>
+      									<option>HeadSet</option>
+      									<option>Keyboard</option>
+      									<option>WirelessMouse</option>
+      									<option>Mobile</option>
+    							</select>
+  						</div>
+			        	<div class="form-group">
+			    				<label for="formGroupExampleInput">Asset ID</label>
+			    				<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+			  			</div>
+			        	<div class="form-group">
+			    				<label for="exampleTextarea">ISSUES/COMMENTS</label>
+			    				<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+			  			</div>
+
+		        </form>
+		      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+ 	   		</div>
+		  </div>
+		</div>
+	</div>
+
+</div>
+<!-- header for issues raised - end	    	 -->
+
+<!-- ADD ASSET STARTS HERE -->
+
+
+<!--header-bot-right start here-->
+<div class="col-md-8 header-bot-right" id="ADD_ASSETS" style="width:100%;">
+<!--analytic start here-->
+	    		<!-- Login start here -->
+	    			<div class="login">
+					<h4 style="color:black;size:20px;">ADD ASSET SECTION</h4>
+					<table class="table">
+					  <thead class="thead-inverse">
+					    <tr style="font-size:20px;">
+					      <th>TICKET NO</th>
+					      <th>ASSET</th>
+					      <th>ASSET ID</th>
+					      <th>ISSUES/COMMENTS</th>
+					      <th>STATUS</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Mark</td>
+					      <td>Otto</td>
+					      <td>@mdo</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>Jacob</td>
+					      <td>Thornton</td>
+					      <td>@fat</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					    </tr>
+
+					  </tbody>
+				</table>
+
+					<div class="remember">
+						<div class="send">
+							<input type="submit" data-toggle="modal" data-target="#newAssetModal" value="ADD NEW ASSET">
+							<!-- <input type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" value="ADD TICKET"/> -->
+  
+
+									</div>
+								  <div class="clearfix"> </div>
+								</div>
+
+							
+									<!-- Large modal -->
+
+								 <!-- Button trigger modal -->
+
+
+<!-- Modal -->  <!-- for Adding a new TICKET -->
+<div class="modal fade" id="newAssetModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+	        </button>
+	        <h4 class="modal-title" id="myModalLabel">ADD NEW ASSET</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form>
+		  	      	<div class="form-group">
+	    							<label for="exampleSelect1">ASSET NAME</label>
+	    							<select class="form-control" id="exampleSelect1">
+	    									<option selected="Select" onclick="">Select an Asset</option>
+	      									<option>Laptop</option>
+	      									<option>HeadSet</option>
+	      									<option>Keyboard</option>
+	      									<option>WirelessMouse</option>
+	      									<option>Mobile</option>
+	    							</select>
+  						</div>
+  						<div class="form-group">
+	    							<label for="exampleSelect1">ASSET MANUFACTURER</label>
+	    							<select class="form-control" id="exampleSelect1">
+	    									<option selected="Select" onclick="">Select an option</option>
+	      									<option>Dell</option>
+	      									<option>Hp</option>
+	      									<option>Sony</option>
+	      									<option>Intex</option>
+	      									<option>Acer</option>
+	    							</select>
+  						</div>
+			        	<div class="form-group">
+			    				<label for="formGroupExampleInput">Asset ID</label>
+			    				<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter the AssetID">
+			  			</div>
+			  			<div class="form-group">
+								  <label for="example-datetime-local-input">Brought Date</label>
+								  
+								    <input class="form-control" type="datetime-local" placeholder="Select Date" value="" id="example-datetime-local-input">
+								  
+						</div>
+						<div class="form-group">
+	    							<label for="exampleSelect1">WARRANTY PERIOD</label>
+	    							<select class="form-control" id="exampleSelect1">
+	    									<option selected="Select" onclick="">Select No of Years</option>
+	      									<option>1</option>
+	      									<option>2</option>
+	      									<option>3</option>
+	      									<option>4</option>
+	      									<option>5</option>
+	      									<option>5 and more</option>
+	    							</select>
+  						</div>
+			        	<div class="form-group">
+			    				<label for="exampleTextarea">FILL THE SPECIFICATIONS</label>
+			    				<br>
+			    				<br>
+			    				<br>
+			    				<label for="RAM">RAM</label>
+	    							<select class="form-control" id="RAM">
+	    									<option selected="Select" onclick="">Select RAM in GB</option>
+	      									<option>1 GB</option>
+	      									<option>2 GB</option>
+	      									<option>4 GB</option>
+	      									<option>8 GB</option>
+	      									<option>16 GB</option>
+	      									<option>32 GB</option>
+	      									<option>64 GB</option>
+	      									<option>64 GB and more</option>
+	    							</select>
+	    						<label for="HardDisk">HardDisk Space</label>
+	    							<input type="text" class="form-control" id="HardDisk" placeholder="Enter Hard Disk Space">
+	    						<label for="Processor">Processor</label>
+	    						    <input type="text" class="form-control" id="Processor" placeholder="Enter Hard Disk Space">
+			  			</div>
+
+		        </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+</div>
+</div>
+	    		<!-- Login end here -->
+
+<!-- Assign Asset Section Begins Here -->
+			<div class="col-md-8 header-bot-right" id="ASSIGN_ASSETS" style="width:100%;">
+<!--analytic start here-->
+	    		<!-- Login start here -->
+	    			<div class="login">
+					<h4 style="color:black;size:20px;">ASSIGN ASSETS SECTION</h4>
+					<table class="table">
+  								<thead class="thead-inverse">
+  									  <tr style="font-size:20px;">
+  									    <th>TICKET NO</th>
+									      <th>ASSET</th>
+									      <th>ASSET ID</th>
+									      <th>ISSUES/COMMENTS</th>
+									      <th>STATUS</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <th scope="row">1</th>
+									      <td>Mark</td>
+									      <td>Otto</td>
+									      <td>@mdo</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">2</th>
+									      <td>Jacob</td>
+									      <td>Thornton</td>
+									      <td>@fat</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">3</th>
+									      <td>Larry</td>
+									      <td>the Bird</td>
+									      <td>@twitter</td>
+									    </tr>
+
+							  </tbody>
+							</table>
+
+					<div class="remember">
+						<div class="send">
+							<input type="submit" data-toggle="modal" data-target="#AssignAssetsModal" value="ASSIGN NEW ASSET">
+							<!-- <input type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" value="ADD TICKET"/> -->
+  
+
+								</div>
+							    <div class="clearfix"> </div>
+						</div>
+
+					
+					<!-- Large modal -->
+
+				 <!-- Button trigger modal -->
+
+
+<!-- Modal -->  <!-- for Adding a new TICKET -->
+<div class="modal fade" id="AssignAssetsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+		        <h4 class="modal-title" id="myModalLabel">ASSIGN ASSETS SECTION</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form>
+		        	<div class="form-group">
+    							<label for="exampleSelect1">Select Asset</label>
+    							<select class="form-control" id="exampleSelect1">
+    									<option selected="Select" onclick="">Select an Asset</option>
+      									<option>Laptop</option>
+      									<option>HeadSet</option>
+      									<option>Keyboard</option>
+      									<option>WirelessMouse</option>
+      									<option>Mobile</option>
+    							</select>
+  						</div>
+			        	<div class="form-group">
+			    				<label for="formGroupExampleInput">Asset ID</label>
+			    				<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+			  			</div>
+			        	<div class="form-group">
+			    				<label for="exampleTextarea">ISSUES/COMMENTS</label>
+			    				<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+			  			</div>
+
+		        </form>
+		      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+ 	   		</div>
+		  </div>
+		</div>
+	</div>
+
+
+
+<!-- Assign Asset Section Begins Here -->
+<!--part1 start here-->
+
+&nbsp; &nbsp; &nbsp; <br><br>
+                <div class="bar-kit">
+	    		<div class="col-md-5 header-bot-right-part-1" style="width:100%;">
+<!--latest activity strta here-->
+	    			<div class="latest-activity" id="LOGS_HISTORY">
+	    				<div class="latest-act-top">
+	    					<h4>LOGS HISTORY</h4>
+	    					<span class="rocket"> </span>
+	    				  <div class="clearfix"> </div>
+	    				</div>
+	    				<div class="latest-act-bot">
+	    					<!-- <ul>
+	    						<li><span class="box"> </span></li>
+	    						<li><span class="line"> </span></li>
+	    						<li><span class="box"> </span></li>
+	    						<li><span class="line"> </span></li>
+	    						<li><span class="box"> </span></li>
+	    						<li><span class="line"> </span></li>
+	    						<li><span class="box"> </span></li>
+	    						<li><span class="line"> </span></li>
+	    						<li><span class="box"> </span></li>
+	    						<li><span class="line"> </span></li>
+	    					</ul> -->
+	    					<div class="latest-today">
+	    						<h4>Today,3.20AM</h4>
+	    						<h3>NEW INVOICE SUBMITED</h3>
+	    						<p>Viris phaedrum ad cum, in usu ipsum percipit. Ut ponderum percipitur este -by <span class="todt-joe"> Joe Black </span></p>
+	    					</div>
+	    					<div class="latest-today">
+	    						<h4>Today,2.45AM</h4>
+	    						<h3>ORDER PLACED</h3>
+	    						<p>Viris phaedrum ad cum, in usu ipsum percipit. Ut ponderum percipitur este -by <span class="todt-joe"> Joe Black </span></p>
+	    					</div>
+	    					<div class="latest-today">
+	    						<h4>Today,5.15AM</h4>
+	    						<h3>PRICE CHANGE</h3>
+	    						<p>Viris phaedrum ad cum, in usu ipsum percipit. Ut ponderum percipitur este -by <span class="todt-joe"> Joe Black </span></p>
+	    					</div>
+	    					<div class="latest-today">
+	    						<h4>Today,12.06AM</h4>
+	    						<h3>SITE UPDATE</h3>
+	    						<p>Viris phaedrum ad cum, in usu ipsum percipit. Ut ponderum percipitur este -by <span class="todt-joe"> Joe Black </span></p>
+	    					</div>
+	    					<div class="latest-today">
+	    						<h4>NEW PRODUCTS</h4>
+	    						<h3>NEW INVOICE SUBMITED</h3>
+	    						<p>Viris phaedrum ad cum, in usu ipsum percipit. Ut ponderum percipitur este -by <span class="todt-joe"> Joe Black </span></p>
+	    					</div>
+	    				</div>
+	    				<div class="late-btn">
+	    					<a href="LogsView.html">LOAD MORE</a>
+	    				</div>
+	    			</div>
+<!--video start here-->
+	    			<div class="video">
+	    				<div class="content-middle-top2">
+							<div class=" video-grid">
+								<div id="jp_container_1" class="jp-video jp-video-360p" role="application" aria-label="media player">
+						
+								</div>
+							</div>
+						</div>
+	    			</div>
+	    		</div>
+<!--part2 start here-->
+	    	
+		</div>
+	</div>
+</div>
+<!--header end here-->
+
+<!-- Footer Starts Here -->
+
+</div>
+</div>
+
+</body>
+</html>
+
+
+<!-- Map Code
+<div class="container">
+	<div class="row-fluid">
+        <div class="span8">
+        	<!-- <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=15+Springfield+Way,+Hythe,+CT21+5SH&aq=t&sll=52.8382,-2.327815&sspn=8.047465,13.666992&ie=UTF8&hq=&hnear=15+Springfield+Way,+Hythe+CT21+5SH,+United+Kingdom&t=m&z=14&ll=51.077429,1.121722&output=embed"></iframe> -->
+<!--         	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15554.34705390854!2d77.6942371!3d12.9342601!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2fd577605843f83b!2sAccolite!5e0!3m2!1sen!2sin!4v1474456742334" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        	<div class="span4" style="color:white;">
+    		<h2>ACCOLITE</h2>
+    		<address>
+    			<strong>Accolite Software India Pvt Limited</strong><br>
+    			15 Springfield Way<br>
+    			Hythe<br>
+    			Kent<br>
+    			United Kingdon<br>
+    			CT21 5SH<br>
+    			<abbr title="Phone">P:</abbr> 01234 567 890
+    		</address>
+    	</div>
+    	</div>
+    	
+      	
+    </div>
+</div> --> 
+

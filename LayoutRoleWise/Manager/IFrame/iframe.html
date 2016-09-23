@@ -1,0 +1,220 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>]Inventory Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+
+  <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<!-- Custom Theme files -->
+
+<script>$(document).ready(function(c) {
+	$('.cros').on('click', function(c){
+		$('.user-profile').fadeOut('slow', function(c){
+	  		$('.user-profile').remove();
+		});
+	});	  
+});
+</script>
+<script>
+	$(document).ready(function(){
+		
+		$("#Asset_Div").show();
+		$("#IssuesRaised").hide();
+		$("#ByAsset").hide();
+		$("#ByNameDiv").hide();
+		$("#Asset").click(function(){
+			alert("Called");
+			$("#IssuesRaised").hide();
+			$("#Asset_Div").show();
+			alert('success');
+		});
+
+		$("#ByAssetNavButton").click(function(){
+			alert("success");
+			$("#ByAsset").show();
+			$("#ByNameDiv").hide();
+		});
+
+		$("#ByNameNavButton").click(function(){
+			alert('success');
+			$('#ByNameDiv').show();
+			$("#ByAsset").hide();
+		});
+	});
+</script>  
+
+<script type="text/javascript" src="JS/angular.min.js"></script>
+
+
+</head>
+<body ng-app="">
+<!--header start here-->
+
+<div class="header">
+	<h3 class="main-head"></h3>
+	    <div class="head-strip">
+	    	<div class="head-strip-left">
+	    		<span class="joe"><img src="images/1.png" alt=""> </span>
+	    		<div class="joe-text">
+	    			<h2 style="color:black;">Welcome back SRIDHAR BABU</h2>
+	    			<p style="color:black;">All is Well!</p>
+	    		</div>
+	    	</div>
+	    	<div class="head-strip-right">
+	    		<ul class="strip-date" style="color:black;">
+	    			<a href="#ADD_ASSETS"><li><span class="cal"> </span><h4 style="color:black;">ADD ASSET</h4></li></a>
+	    			<!-- <a href="#ASSIGN_ASSETS"> --><li><span class="clock"> </span><h4 id="Asset" style="color:black;">ASSIGN ASSET </h4></li><!-- </a> -->
+	    			<a href="#LOGS_HISTORY"><li><span class="sun"> </span><h4 style="color:black;">HISTORY LOGS</h4></li></a>
+	    		</ul>
+	    		<div class="settiing">
+	    			<div class="menu2">
+					<span class="menu-at-on"><img src="images/setter.png" alt=""> </span>	
+					<b><ul>
+						<li><a href="#">Profile</a></li>
+						<!-- <li><a href="#" >Login</a></li>	 -->
+						<li><a href="#" >Log Out</a></li>							
+					</ul></b>
+					<script>
+						$("span.menu-at-on").click(function(){
+							$(".menu2 ul").slideToggle(500, function(){
+							});
+						});
+
+					</script>
+				</div>
+						</div>
+	    		</div>
+	    		  <div class="clearfix"> </div>
+	    	</div>
+	    	
+<!--header bottom start here-->
+	    <div class="header-bottom">	
+		
+				    <div name="IssuesRaisedDiv" id="IssuesRaised" ng-include="'Htmlfiles/Issues_Raised.html'">
+
+				    </div>
+
+				    <div class="col-md-8 header-bot-right ng-scope" id="Asset_Div" style="-webkit-border-radius: 30px;-moz-border-radius: 30px;border-radius: 30px;background:rgba(131,75,227,0.5);background:white;border:1px solid white;width:100%;height:auto;margin:0; padding:0;">
+				    	<style type="text/css"> 
+  								ul#Asset_Menu li.nav-item a.nav-link:hover {
+  									color: red;
+  									font-weight: bold;
+  									background-color: white;
+  								}
+  								ul#Asset_Menu li.nav-item a.nav-link {
+  									color: black;
+
+  								}
+				    	</style>
+				    	<ul class="nav nav-tabs" style="-webkit-border-radius: 30px;-moz-border-radius: 30px;border-radius: 50px;color:black;" id="Asset_Menu">
+								
+									  <li class="nav-item">
+									    <a class="nav-link active" href="#" id="ByAssetNavButton">BY ASSET</a>
+									  </li>
+									  
+									  <li class="nav-item">
+									    <a class="nav-link" href="#" id="ByNameNavButton">BY NAME</a>
+									  </li>
+									  
+						</ul>
+
+						<!-- <p style="color:black;">SELECT ANY ONE OF THE FOLLOWING OPTIONS TO VIEW THE ASSETS DETAILS!! </p> -->
+						<br>
+				    <br>
+				    <br>
+				    <br>
+				    <br>
+
+				    	<div id="ByAsset" ng-include="'Themes/WoodTheme/ByAsset.html'">
+				    		<!-- <div class="modal-body" style="width:400px;margin:0 auto;">
+		        					<form>
+								  	      	<div class="form-group">
+							    							<label for="exampleSelect1">ASSET NAME</label>
+							    							<select class="form-control" id="exampleSelect1">
+							    									<option selected="Select" onclick="">Select an Asset</option>
+							      									<option>Laptop</option>
+							      									<option>HeadSet</option>
+							      									<option>Keyboard</option>
+							      									<option>WirelessMouse</option>
+							      									<option>Mobile</option>
+							    							</select>
+						  						</div>
+						  						<div class="form-group">
+						    							<label for="exampleSelect1">ASSET MANUFACTURER</label>
+						    							<select class="form-control" id="exampleSelect1">
+						    									<option selected="Select" onclick="">Select an option</option>
+						      									<option>Dell</option>
+						      									<option>Hp</option>
+						      									<option>Sony</option>
+						      									<option>Intex</option>
+						      									<option>Acer</option>
+						    							</select>
+					  						</div>
+  									</form>
+  							</div>
+  							<div class="modal-footer" style="width:400px;margin:0 auto;">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+						        <button type="button" class="btn btn-primary">View Details</button>
+						    </div> -->
+
+				    	</div>
+				    	
+
+
+				    	<div name="ByNameDiv" id="ByNameDiv" ng-include="'Themes/WoodTheme/ByName.html'">
+
+				    	</div>
+				    	
+
+
+				    	&nbsp; &nbsp;
+				    	&nbsp; &nbsp;
+				    	&nbsp; &nbsp;
+				    	&nbsp; &nbsp;
+				    	&nbsp; &nbsp;
+
+				    </div>
+
+		</div>
+
+		</div>
+</div>
+
+</body>
+</html>
+
+
+<!-- Map Code
+<div class="container">
+	<div class="row-fluid">
+        <div class="span8">
+        	<!-- <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=15+Springfield+Way,+Hythe,+CT21+5SH&aq=t&sll=52.8382,-2.327815&sspn=8.047465,13.666992&ie=UTF8&hq=&hnear=15+Springfield+Way,+Hythe+CT21+5SH,+United+Kingdom&t=m&z=14&ll=51.077429,1.121722&output=embed"></iframe> -->
+<!--         	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15554.34705390854!2d77.6942371!3d12.9342601!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2fd577605843f83b!2sAccolite!5e0!3m2!1sen!2sin!4v1474456742334" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        	<div class="span4" style="color:white;">
+    		<h2>ACCOLITE</h2>
+    		<address>
+    			<strong>Accolite Software India Pvt Limited</strong><br>
+    			15 Springfield Way<br>
+    			Hythe<br>
+    			Kent<br>
+    			United Kingdon<br>
+    			CT21 5SH<br>
+    			<abbr title="Phone">P:</abbr> 01234 567 890
+    		</address>
+    	</div>
+    	</div>
+    	
+      	
+    </div>
+</div> --> 
+
