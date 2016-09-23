@@ -1,0 +1,84 @@
+﻿
+@*@model IEnumerable<int>*@
+
+@{
+    ViewBag.Title = "RenderIssues";
+}
+
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<link type="text/css" rel="stylesheet" href="~/Content/dataTables.css" />
+<script>
+
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
+
+
+<h4 style="color:black;size:20px;">LIST OF TICKET</h4>
+<table class="table table-responsive" id="example" class="display" cellspacing="0" width="100%">
+    @*<thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td>2011/04/25</td>
+                                        <td>$320,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>66</td>
+                                        <td>2009/01/12</td>
+                                        <td>$86,000</td>
+                                    </tr>
+                                    </tbody>
+        </table>*@
+
+
+    <thead>
+        <tr style="font-size:17px;">
+            <th>TICKET NO</th>
+            <th>ASSET</th>
+            <th>ASSET ID</th>
+            <th>ISSUES/COMMENTS</th>
+            <th>STATUS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td><text>@@mo</text></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@@fat</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@@twitter</td>
+            <td></td>
+        </tr>
+
+    </tbody>
+</table>
