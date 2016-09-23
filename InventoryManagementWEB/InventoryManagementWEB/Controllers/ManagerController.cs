@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 
 namespace InventoryManagementWEB.Controllers
 {
@@ -19,6 +20,19 @@ namespace InventoryManagementWEB.Controllers
             return View(); 
         }
 
+        //MainManager
+        public ActionResult MainManager()
+        {
+            return View();
+        }
+
+        public ActionResult GetHistoryDetails(string jsondata)
+        {
+            //dynamic DynamicObj = JsonConvert.DeserializeObject(obj);
+            dynamic dynobj = JsonConvert.DeserializeObject(jsondata);
+            //Object DynamicObj = JsonConvert.DeserializeObject(obj);
+            return View();
+        }
         // GET: Manager/Details/5
         public ActionResult Details(int id)
         {
