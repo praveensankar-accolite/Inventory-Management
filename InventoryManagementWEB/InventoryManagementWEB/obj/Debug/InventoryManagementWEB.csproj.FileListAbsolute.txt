@@ -110,3 +110,11 @@ D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\In
 D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\obj\Debug\InventoryManagementWEB.csprojResolveAssemblyReference.cache
 D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\obj\Debug\InventoryManagementWEB.dll
 D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\obj\Debug\InventoryManagementWEB.pdb
+D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\bin\InventoryAPP.dll
+D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\bin\InventoryAPP.pdb
+D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\bin\System.Net.Http.Formatting.dll
+D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\bin\System.Web.Http.dll
+D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\bin\System.Web.Http.WebHost.dll
+D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\bin\System.Net.Http.Formatting.xml
+D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\bin\System.Web.Http.xml
+D:\My OfficeBT\SeptWork\ProjectIM\Inventory-Management\InventoryManagementWEB\InventoryManagementWEB\bin\System.Web.Http.WebHost.xml
