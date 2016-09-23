@@ -19,7 +19,6 @@ namespace InventoryManagementWEB.Controllers
             return View();
         }
 
-
         public ActionResult RenderHome()
         {
             return View(); 
@@ -65,7 +64,7 @@ namespace InventoryManagementWEB.Controllers
                     dynamic product = response.Content.ReadAsAsync<dynamic>().Result;
                     //dynamic Result = product.Result;
                     string result = product.name;
-                    string str = product.foo;
+                    //string str = product.foo;
                 }
             }
 
